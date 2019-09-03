@@ -1,0 +1,34 @@
+:host {
+  max-height: 40rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons-disabled {
+  display: none;
+}
+
+.main-button {
+  flex: 1 1;
+}
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+ion-card-content {
+  padding-top: 0;
+}
+
+.image-container {
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}

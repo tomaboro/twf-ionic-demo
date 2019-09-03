@@ -1,0 +1,29 @@
+<ion-header translucent>
+    <ion-toolbar>
+        <ion-title>Modal Content</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="dismiss()">Close</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<div class="modal-content">
+    <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea [(ngModel)]="description" rows="3"></ion-textarea>
+    </ion-item>
+    <div class="image-container" *ngIf="photo">
+        <img [src]="photo" height="200px" width="auto"/>
+    </div>
+    <ion-button expand="block" color="primary" (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+        Add photo
+    </ion-button>
+    <div class="filler"></div>
+    <ion-button expand="block" color="success" (click)="save()">
+        Save
+    </ion-button>
+</div>

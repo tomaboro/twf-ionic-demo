@@ -1,0 +1,24 @@
+<ion-card>
+    <div class="image-container">
+        <img *ngIf="card.imageSrc" [src]="card.imageSrc"/>
+    </div>
+    <ion-card-header>
+        <div class="header-title">
+            <ion-card-subtitle>Product name</ion-card-subtitle>
+            <ion-badge>{{ card.clicks }}</ion-badge>
+        </div>
+        <ion-card-title>{{ card.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        {{ card.description }}
+        <div [className]="buttonsDisabled ? 'buttons-disabled' : 'buttons'">
+            <ion-button expand="block" class="main-button" (click)="upgradeClick.emit()">I want it!</ion-button>
+            <ion-button color="success" (click)="buyClick.emit()">
+                <ion-icon slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+            <ion-button color="warning" (click)="archiveClick.emit()">
+                <ion-icon slot="icon-only" name="archive"></ion-icon>
+            </ion-button>
+        </div>
+    </ion-card-content>
+</ion-card>

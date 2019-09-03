@@ -1,0 +1,26 @@
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  img {
+    max-height: 6rem;
+    width: auto;
+  }
+}
+
+ion-content {
+  overflow-y: scroll;
+}
+
+.ceneterd-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.description {
+  padding: 1rem;
+}

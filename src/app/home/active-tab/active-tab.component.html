@@ -1,0 +1,13 @@
+<ion-searchbar (ionChange)="searchRequest($event)"></ion-searchbar>
+<div class="scroll">
+    <app-card *ngFor="let card of filteredCards$ | async"
+              [card]="card" (upgradeClick)="upgrade(card)"
+              (buyClick)="buy(card)"
+              (archiveClick)="archive(card)">
+    </app-card>
+</div>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewCard()">
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
